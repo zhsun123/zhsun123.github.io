@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 2652406S—GDP of cities in China in 2022</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8' />
+  <title>GDP of cities in China in 2022</title>
+  <meta name='author' content='Joanne Marsh' />
+  <!-- viewport pan and zoom restrictions -->
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scaleable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
+
+  <!-- Connect to google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+
+<body>
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <div id=testing></div>
+
+    <table id="fellsTable">
+      <theader>
+        <th>city</th>
+        <th>GDP</th>
+      </theader>
+      <tbody id='fellsTableBody'>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div id="main">
+    <button class="sidebarbtn" onclick="openNav()">&#9776; See List</button>
+
+    <div class='title-overlay'> GDP of cities <br>
+      </span> China in 2022</div>
+
+    <div id='map'></div>
+
+    <!-- Difficulty menu -->
+
+    <div id="levels" class="dropup">
+      <button class="dropbtn" id='levelstext'> Set Difficulty:<br> <span id='lvlselected' style="font-size: 1.8em"> grade</span> </button>
+      <div class="dropup-content">
+        <button class='lvl' id="lvl_any" onclick="myFilterFunction('any', 'Any')">Any</button>
+        <button class='lvl' id="lvl_Smallcities" onclick="myFilterFunction('1 - 1000', 'Smallcities')">Smallcities</button>
+        <button class='lvl' id="lvl_Mediumcities" onclick="myFilterFunction('1000 - 5000', 'Mediumcities')">Mediumcities</button>
+        <button class='lvl' id="lvl_Largecities" onclick="myFilterFunction('5000 - 10000', 'Largecities')">Largecities</button>
+        <button class='lvl' id="lvl_Supercities" onclick="myFilterFunction('> 10000', 'Supercities')">Supercities</button>
+        <button class='lvl' id="lvl_UNKNOW" onclick="myFilterFunction('< 1', 'UNKNOW')">UNKNOW</button>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+<!-- Mapbox JS API !-->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+<!-- Mapbox CSS!-->
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
